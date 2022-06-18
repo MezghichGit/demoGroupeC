@@ -56,6 +56,12 @@ export class ContactComponent implements OnInit {
       'avatar': ''
     }
   ];
+
+  result:number=0;
+  A:number=0;
+  B:number=0;
+  C:number=0;
+  D:number=0;
   constructor() { }
 
   ngOnInit(): void {
@@ -66,6 +72,9 @@ export class ContactComponent implements OnInit {
   changeAlert()
   {
     this.test=!this.test;
+  }
+  calculateSum(){
+    this.result=this.A+this.B;
   }
 
 }

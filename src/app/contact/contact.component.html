@@ -16,6 +16,29 @@
   <li *ngFor="let nom of nomEtudiants">{{nom|firstLetterUpperCase}}</li>
 </ul>
 
+Calculatrice
+<div style="background-color: rgb(185, 204, 185); width: 200px; height: 200px">
+  <form>
+    Enter first number:
+    <input type="number" name="firstValue" [(ngModel)]=A />
+     Enter second number:
+    <input type="number" name="secondValue" [(ngModel)]=B />
+
+    the result :
+    <input type="text" name="result" value="{{ result }}" />
+    <button (click)="calculateSum()">sum</button>
+  </form>
+</div>
+runtime Calculus
+<div style="background-color: rgb(185, 204, 185); width: 200px; height: 200px">
+    <form>
+      Enter first number:
+      <input type="number" name="firstValue" [(ngModel)]=C />
+      Enter second number
+       <input type="number" name="secondValue" [(ngModel)]=D />
+      the result :<input type="text" name="result" value="{{ C+D }}" />
+    </form>
+  </div>
 <table border="1" align="center" class="table">
   <tr><th>Nom</th><th>Age</th><th>Email</th><th>Moyenne</th><th>Tel</th></tr>
   <tr *ngFor="let etudiant of detailsEtudiants">
