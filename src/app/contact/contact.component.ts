@@ -6,10 +6,12 @@ import { Etudiant } from './models/Entities';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public logo:string="http://www.4brandadvertising.com/media/portfolios/19-portfolio-Logo-Sesame-University_4Brand.png"
   public formateur: string = "Mohamed Amine MEZGHICH";
   public goupe: string = "Groupe C";
   public tab:any[]=["Sesame",20,true];
   public test:any =true; // boolean value
+  public nomModule:string="Angular";
   public nomEtudiants: any[] = ["ahmed", "ons", "rabeb", "Oumaima", "Raouf", "Eya", "Moez", "Sana", "Tarek", "Yousef", "Abir", "Amine"];
   public detailsEtudiants: Etudiant[] = [
     {

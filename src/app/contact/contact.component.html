@@ -1,3 +1,4 @@
+<img [src]="logo" width="20%"/>
 <h2 align="center">Formulaire de contact</h2>
 
 <div *ngIf="test" class="alert alert-success" role="alert">
@@ -9,6 +10,7 @@
 <button class="btn btn-primary" (click)="changeAlert()">Cliquer ici pour changer d'alert</button>
 <h3>Formateur : {{formateur}}</h3>
 <h4>Classe : {{goupe}}</h4>
+<h4>Nom du module : {{nomModule}}</h4> <input type="text" [(ngModel)]=nomModule/>
 <h5>Liste des noms</h5>
 <ul>
   <li *ngFor="let nom of nomEtudiants">{{nom|firstLetterUpperCase}}</li>
