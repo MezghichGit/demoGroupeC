@@ -1,17 +1,23 @@
 <h2 align="center">Formulaire de contact</h2>
 
-
+<div *ngIf="test" class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div *ngIf="!test"class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+<button class="btn btn-primary" (click)="changeAlert()">Cliquer ici pour changer d'alert</button>
 <h3>Formateur : {{formateur}}</h3>
 <h4>Classe : {{goupe}}</h4>
 <h5>Liste des noms</h5>
 <ul>
-  <li *ngFor="let nom of nomEtudiants">{{nom}}</li>
+  <li *ngFor="let nom of nomEtudiants">{{nom|firstLetterUpperCase}}</li>
 </ul>
 
 <table border="1" align="center" class="table">
   <tr><th>Nom</th><th>Age</th><th>Email</th><th>Moyenne</th><th>Tel</th></tr>
   <tr *ngFor="let etudiant of detailsEtudiants">
-    <td>{{etudiant.nom}}</td>
+    <td>{{etudiant.nom|uppercase}}</td>
     <td>{{etudiant.age}}</td>
     <td>{{etudiant.email}}</td>
     <td>{{etudiant.moyenne}}</td>

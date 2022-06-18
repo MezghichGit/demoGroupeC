@@ -10,7 +10,7 @@ export class ContactComponent implements OnInit {
   public goupe: string = "Groupe C";
   public tab:any[]=["Sesame",20,true];
   public test:any =true; // boolean value
-  public nomEtudiants: any[] = ["Ahmed", "Ons", "Rabeb", "Oumaima", "Raouf", "Eya", "Moez", "Sana", "Tarek", "Yousef", "Abir", "Amine"];
+  public nomEtudiants: any[] = ["ahmed", "ons", "rabeb", "Oumaima", "Raouf", "Eya", "Moez", "Sana", "Tarek", "Yousef", "Abir", "Amine"];
   public detailsEtudiants: Etudiant[] = [
     {
       'nom': 'ahmed',
@@ -59,6 +59,11 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
 
     this.test = 12;  // number value
+  }
+
+  changeAlert()
+  {
+    this.test=!this.test;
   }
 
 }
