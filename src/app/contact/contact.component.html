@@ -1,0 +1,49 @@
+<h2 align="center">Formulaire de contact</h2>
+
+
+<h3>Formateur : {{formateur}}</h3>
+<h4>Classe : {{goupe}}</h4>
+<h5>Liste des noms</h5>
+<ul>
+  <li *ngFor="let nom of nomEtudiants">{{nom}}</li>
+</ul>
+
+<table border="1" align="center" class="table">
+  <tr><th>Nom</th><th>Age</th><th>Email</th><th>Moyenne</th><th>Tel</th></tr>
+  <tr *ngFor="let etudiant of detailsEtudiants">
+    <td>{{etudiant.nom}}</td>
+    <td>{{etudiant.age}}</td>
+    <td>{{etudiant.email}}</td>
+    <td>{{etudiant.moyenne}}</td>
+    <td>{{etudiant.tel}}</td>
+  </tr>
+</table>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+      </form>
+    </div>
+    <div class="col-sm">
+
+    </div>
+  </div>
+</div>
