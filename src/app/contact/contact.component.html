@@ -8,6 +8,17 @@
   This is a danger alert—check it out!
 </div>
 <button class="btn btn-primary" (click)="changeAlert()">Cliquer ici pour changer d'alert</button>
+<table border="1" align="center" class="table">
+  <tr><th>ID</th><th>Name</th><th>UserName</th><th>Email</th><th>Address</th></tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name|uppercase}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.address.street}}</td>
+  </tr>
+</table>
+
 <h3>Formateur : {{formateur}}</h3>
 <h4>Classe : {{goupe}}</h4>
 <h4>Nom du module : {{nomModule}}</h4> <input type="text" [(ngModel)]=nomModule/>
